@@ -1,7 +1,6 @@
 package bsu.gof.factory;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class TestFactory {
@@ -39,6 +38,13 @@ public class TestFactory {
 		comp.setRom(factory.createROM());
 
 		assertTrue(comp.getType() == ComputerType.SPARK);
+	}
+	
+	@Test
+	public void testPCComputerFactoryMethod(){
+		ComputerCreator computerCreator = new ComputerCreator();
+		Computer comp = computerCreator.getProduct(ComputerType.PC);
+		assertTrue(comp.getType() == ComputerType.PC);
 	}
 
 }

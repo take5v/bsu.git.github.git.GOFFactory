@@ -30,4 +30,5 @@ public abstract class Computer {
 	}
 
 	public abstract ComputerType getType();
+	
 }
